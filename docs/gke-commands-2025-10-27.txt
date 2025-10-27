@@ -1,0 +1,21 @@
+  255  gcloud services enable container.googleapis.com
+  256  gcloud version
+  257  gcloud auth login
+  258  gcloud services enable container.googleapis.com
+  259  gcloud services enable compute.googleapis.com
+  260  gcloud --project
+  261  gcloud --project access-approval
+  263  gcloud init
+  265* gcloud auth login --no-launch-browser
+  266  gcloud config set project k8s-mfbt
+  267  gcloud config set compute/zone asia-northeast3-a
+  268  gcloud version
+  270  gcloud container clusters create kubia --zone=asia-northeast3-a num-nodes=2 \
+  271  gcloud container clusters create kubia --zone=asia-northeast3-a --num-nodes=2 --machine-type=e2-standard-2 --disk-type=pd-standard --enable-autoscaling --min-nodes=1 --max-nodes=3 --enable-autorapair --enable-autoupgrade --no-enable-cloud-logging --no-enable-cloud-monitoring
+  272  gcloud container clusters create kubia --zone=asia-northeast3-a --num-nodes=2 --machine-type=e2-standard-2 --disk-type=pd-standard --enable-autoscaling --min-nodes=1 --max-nodes=3 --enable-autorepair --enable-autoupgrade --no-enable-cloud-logging --no-enable-cloud-monitoring
+  273  gcloud container clusters list
+  279  gcloud componets install gke-gcloud-auth-plugin
+  280  gcloud components install gke-gcloud-auth-plugin
+  281  sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin
+  284  gcloud container clusters describe kubia
+  311  history | grep gcloud > docs/gke-commands-$(date +%F).txt
