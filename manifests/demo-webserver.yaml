@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-wevbserver
+  labels:
+    app: nginx-webserver
+    version: manual
+spec:
+  containers:
+    - name: webserver
+      image: nginx
+      ports:
+      - containerPort: 8080
+        protocol: TCP
