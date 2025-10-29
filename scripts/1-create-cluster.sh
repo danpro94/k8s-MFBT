@@ -62,7 +62,7 @@ kubectl get nodes -o wide
 # 백업이 있을 경우 복원 여부 확인
 if [ -d "$BACKUP_DIR" ] && [ "$(ls -A $BACKUP_DIR)" ]; then
 	echo ""
-	echo -p "이전 백업을 복원하시겠습니까? (y/N): " -n 1 -r
+	read -p "이전 백업을 복원하시겠습니까? (y/n):" -n 1 -r
 	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		bash "$(dirname "$0")/4-restore-state.sh"
