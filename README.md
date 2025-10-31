@@ -34,4 +34,5 @@ k8s-Move fast and break things
 
 ### 1. 환경 구축
 ### 2. GCP(Free trial) + GKE 클러스터 생성
+### 3. 비용최적화를 위한 Cloud 클러스터 생성(복원)/삭제(백업) 자동화 with bash script
 
