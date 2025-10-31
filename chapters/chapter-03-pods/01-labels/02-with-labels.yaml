@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-frontend-1
+  labels:
+    app: web-frontend
+    tier: frontend
+    environment: production
+    version: v1.0
+spec:
+  containers:
+  - name: frontend
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-backend-1
+  labels:
+    app: web-backend
+    tier: backend
+    environment: production
+    version: v1.0
+spec:
+  containers:
+  - name: backend
+    image: node:18
+    ports:
+    - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-1
+  labels:
+    app: db
+    tier: data
+    environment: production
+    version: v8.0
+spec:
+  containers:
+  - name: database
+    image: mysql:8
+    ports:
+    - containerPort: 3306
